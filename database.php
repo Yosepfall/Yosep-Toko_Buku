@@ -1,15 +1,9 @@
 <?php
-// File: koneksi.php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "aplikasi";
-
-// Buat koneksi
-$conn = new mysqli($servername, $username, $password, $database);
+// Koneksi ke database
+$koneksi = new mysqli('localhost', 'root', '', 'Toko');
 
 // Cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($koneksi->connect_error) {
+    die("Koneksi gagal: " . $koneksi->connect_error);
 }
 ?>
